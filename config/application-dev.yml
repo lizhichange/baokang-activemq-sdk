@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: baokang-kafka-sdk
+
+  activemq:
+    broker-url: tcp://localhost:61616
+    user: admin
+    password: admin
+    in-memory: true
+
+
+
+server:
+  context-path: /
+  port: 8188
+  tomcat:
+    min-spare-threads: 20 #设置tomcat最小活跃线程数   为ThreadPoolExcuter类中的corepools大小
+    max-connections: 2000 #设置最大http连接数
+    max-threads: 800 #设置tomcat最大线程数
+
+
+logging:
+  config: ./config/logback-dev.xml
+
+
+
+
+
+
