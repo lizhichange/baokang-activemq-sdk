@@ -19,6 +19,8 @@ public class ActiveMqSdkApplication {
      * @param args
      */
     public static void main(String[] args) {
+
+
         SpringApplication.run(ActiveMqSdkApplication.class, args);
     }
 
