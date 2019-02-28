@@ -13,7 +13,12 @@ class MuFunc {
 
     public static void main(String[] args) {
         MuFunc func = new MuFunc();
-        Long add = func.getAdd(1L, 3L, (t1, t2) -> t1 + t2);
+        Long add = func.getAdd(1L, 3L, new MyFunction<Long, Long>() {
+            @Override
+            public Long handler(Long t1, Long t2) {
+                return t1 +t2;
+            }
+        });
         System.out.println(add);
     }
 
